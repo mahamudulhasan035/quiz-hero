@@ -14,179 +14,134 @@
     <title>Blog Page</title>
   </head>
   <body>
-    <!-- Blog  -->
-    <section class="max-w-screen-xl mx-auto pt-32">
-      <div class="container mx-auto px-6">
-        <h2 class="text-center text-2xl sm:text-3xl md:text-5xl font-semibold">
-          Frequently <span class="text-[#215675b7]">Asked Questions</span>
-        </h2>
-
-        <!-- FAQ Content -->
-        <div class="grid grid-cols-1 pt-12">
-          <div>
-            <div
-              class="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8"
-            >
-              <div class="space-y-4">
-                <details class="w-full border rounded-lg cursor-pointer">
-                  <summary
-                    class="px-4 py-5 focus:outline-none focus-visible:ring-violet-400 font-medium text-lg"
-                  >
-                    JavaScript Array methods: map() Vs forEach() Vs filter() Vs
-                    find()
-                  </summary>
-                  <div class="px-4 py-6 pt-0 ml-4 -mt-4">
-                    <div>
-                      <h3 class="font-bold text-lg">1. map()</h3>
-                      <p>
-                        The array map() method works with each element of an
-                        array and returns a new array.
-                      </p>
-                    </div>
-                    <br />
-
-                    <div>
-                      <h3 class="font-bold text-lg">2. forEach()</h3>
-                      <p>
-                        The array forEach() method works with each element of an
-                        array but doesn't returns a new array.
-                      </p>
-                    </div>
-                    <br />
-
-                    <div>
-                      <h3 class="font-bold text-lg">3. filter()</h3>
-                      <p>
-                        The array filter method works with those array elements
-                        which fulfil single or multiple conditions. The filter
-                        method returns a new array. If no array elements
-                        fulfilled the conditions, then it will return an empty
-                        array.
-                      </p>
-                    </div>
-                    <br />
-
-                    <div>
-                      <h3 class="font-bold text-lg">4. find()</h3>
-                      <p>
-                        The array finds method searches for a specific array
-                        element with a condition. If the element is found within
-                        the array, then it will return the element. If no
-                        element fulfilled the condition, then it will return
-                        <span class="font-semibold">undefined</span>. If
-                        multiple elements fulfil the condition, the find method
-                        will return the first matched element.
-                      </p>
-                    </div>
-                  </div>
-                </details>
-                <details class="w-full border rounded-lg cursor-pointer">
-                  <summary
-                    class="px-4 py-5 focus:outline-none focus-visible:ring-violet-400 font-medium text-lg"
-                  >
-                    Difference between localStorage Vs sessionStorage Vs
-                    Cookies.
-                  </summary>
-                  <div class="overflow-x-auto">
-                    <table class="table table-zebra w-full">
-                      <!-- head -->
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>Cookies</th>
-                          <th>Local Storage</th>
-                          <th>Session Storage</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- row 1 -->
-                        <tr>
-                          <th>Expires</th>
-                          <td>manually set</td>
-                          <td>Never</td>
-                          <td>On tab close</td>
-                        </tr>
-                        <!-- row 2 -->
-                        <tr>
-                          <th>Storage Location</th>
-                          <td>Browser and Server</td>
-                          <td>Browser only</td>
-                          <td>Browser only</td>
-                        </tr>
-                        <!-- row 3 -->
-                        <tr>
-                          <th>Sent with Request</th>
-                          <td>Yes</td>
-                          <td>No</td>
-                          <td>No</td>
-                        </tr>
-                        <!-- row 4 -->
-                        <tr>
-                          <th>Capacity</th>
-                          <td>4KB</td>
-                          <td>10MB</td>
-                          <td>5MB</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </details>
-                <details class="w-full border rounded-lg cursor-pointer">
-                  <summary
-                    class="px-4 py-5 focus:outline-none focus-visible:ring-violet-400 font-medium text-lg"
-                  >
-                    What is JavaScript Event loop? How does it works?
-                  </summary>
-                  <p class="px-4 py-6 pt-0 ml-4 -mt-4">
-                    In JavaScript, when some code needs to be executed, it will
-                    go to the call stack. Call stack works as LIFO method (Last
-                    In First Out). If the code's default behavior is
-                    synchronous, then it will execute and pop up from the call
-                    stack. But if its behavior is asynchronous, then it will go
-                    to the Web API / Browser API and performs its task there.
-                    Such as (setTimeout, setInterval, fetch(), DOM Event, etc).
-                    When the assigned task is complete, these codes will go to
-                    the Queue which works as a FIFO method (First In First Out)
-                    and wait there. Now the Event loop will work. The event loop
-                    will check if the call stack is empty or not. If it is, then
-                    will send the code from the queue to call the stack one by
-                    one.
-                  </p>
-                </details>
-                <details class="w-full border rounded-lg cursor-pointer">
-                  <summary
-                    class="px-4 py-5 focus:outline-none focus-visible:ring-violet-400 font-medium text-lg"
-                  >
-                    What does quizTimer() function do?
-                  </summary>
-                  <p class="px-4 py-6 pt-0 ml-4 -mt-4">
-                    The quizTimer() function takes a parameter which is a
-                    boolean value. If it's true, then it will stop the
-                    setInterval() function. Inside the function calculates how
-                    much minutes and seconds a user takes to complete all the
-                    quizzes. Depending on the second number (even or odd) it
-                    changes the color of the time.
-                  </p>
-                </details>
-                <details class="w-full border rounded-lg cursor-pointer">
-                  <summary
-                    class="px-4 py-5 focus:outline-none focus-visible:ring-violet-400 font-medium text-lg"
-                  >
-                    What does chooseQuiz() function do?
-                  </summary>
-                  <p class="px-4 py-6 pt-0 ml-4 -mt-4">
-                    The chooseQuiz() function takes two parameters which are
-                    index (the index of the quizData array), and givenAns (the
-                    answer the user has chosen). First, it checks if the answer
-                    is already in the array or not. If it does, then replace it
-                    with the new answer, otherwise, add it to the array.
-                  </p>
-                </details>
-              </div>
-            </div>
-          </div>
+    <!-- Header/Navbar section start -->
+    <header class="flex items-center h-16 shadow-sm">
+      <nav class="flex items-center justify-between w-9/12 mx-auto">
+        <div class="font-bold uppercase text-zinc-800">
+          <a href="./index.html">
+            <h1 class="text-lg">
+              Quiz <span class="text-green-700">HERO</span>
+            </h1>
+            <p class="text-[10px] font-normal capitalize -mt-1">
+              Get ready to Quiz and be amazed!
+            </p>
+          </a>
         </div>
-      </div>
-    </section>
+
+        <a href="./index.html">
+          <button
+            class="px-5 py-1 text-sm font-light text-white bg-green-600 rounded"
+          >
+            Home
+          </button>
+        </a>
+      </nav>
+    </header>
+    <!-- Header/Navbar section end -->
+    <!-- Blog  -->
+    <main>
+      <section class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto space-y-5 py-10">
+        <!-- Question 1 -->
+        <article class="pb-5 space-y-3 border-b-2">
+          <h2 class="text-xl font-bold">
+            <span class="text-red-600">Q1: </span> What are JavaScript data
+            types?
+          </h2>
+          <p class="text-justify">
+            <span class="text-green-600">Answer: </span> JavaScript has several
+            data types that allow developers to work with various forms of data.
+            Primitive types include <code>string</code> (e.g., "Hello"),
+            <code>number</code> (e.g., 42), <code>boolean</code> (true or
+            false), <code>undefined</code> (a variable declared but not assigned
+            a value), <code>null</code> (intentional absence of any value), and
+            <code>symbol</code> (introduced in ES6, representing unique
+            identifiers). Additionally, <code>object</code> is a non-primitive
+            data type used for storing collections of data or complex entities,
+            such as arrays, functions, and objects.
+          </p>
+        </article>
+
+        <!-- Question 2 -->
+        <article class="pb-5 space-y-3 border-b-2">
+          <h2 class="text-xl font-bold">
+            <span class="text-red-600">Q2: </span> What is the difference
+            between <code>var</code>, <code>let</code>, and <code>const</code>?
+          </h2>
+          <p class="text-justify">
+            <span class="text-green-600">Answer: </span> <code>var</code> is
+            function-scoped and can be redeclared and updated. Variables
+            declared with <code>var</code> are hoisted, but their initialization
+            remains undefined until the interpreter reaches the declaration.
+            <code>let</code> is block-scoped, meaning it is limited to the scope
+            of the block where it is defined. It cannot be redeclared in the
+            same scope but can be updated. It also respects the temporal dead
+            zone, preventing usage before declaration. <code>const</code> is
+            also block-scoped but is used to declare constants, meaning its
+            value cannot be reassigned after initialization. However, for
+            objects and arrays, the properties or elements can still be
+            modified.
+          </p>
+        </article>
+
+        <!-- Question 3 -->
+        <article class="pb-5 space-y-3 border-b-2">
+          <h2 class="text-xl font-bold">
+            <span class="text-red-600">Q3: </span> What is a closure in
+            JavaScript?
+          </h2>
+          <p class="text-justify">
+            <span class="text-green-600">Answer: </span> A closure is a
+            combination of a function and its lexical environment (the scope in
+            which it was created). Closures allow a function to access variables
+            from its outer scope even after that scope has finished execution.
+            For example:
+            <code>
+              function outer() { let count = 0; return function inner() {
+              count++; return count; }; }
+            </code>
+            Closures are often used to create private variables or to maintain
+            state in an encapsulated way.
+          </p>
+        </article>
+
+        <!-- Question 4 -->
+        <article class="pb-5 space-y-3 border-b-2">
+          <h2 class="text-xl font-bold">
+            <span class="text-red-600">Q4: </span> How does the
+            <code>this</code> keyword work in JavaScript?
+          </h2>
+          <p class="text-justify">
+            <span class="text-green-600">Answer: </span> The behavior of
+            <code>this</code> in JavaScript is dynamic and depends on the
+            context in which it is used. In the global context or in regular
+            functions, <code>this</code> refers to the global object (<code
+              >window</code
+            >
+            in browsers, <code>global</code> in Node.js). In methods,
+            <code>this</code> points to the object that owns the method. In
+            arrow functions, <code>this</code> is lexically bound, meaning it
+            inherits the <code>this</code> value from its surrounding scope.
+          </p>
+        </article>
+
+        <!-- Question 5 -->
+        <article class="pb-5 space-y-3 border-b-2">
+          <h2 class="text-xl font-bold">
+            <span class="text-red-600">Q5: </span> What is the difference
+            between <code>==</code> and <code>===</code> in JavaScript?
+          </h2>
+          <p class="text-justify">
+            <span class="text-green-600">Answer: </span> <code>==</code> (loose
+            equality) compares two values after performing type coercion. This
+            means it tries to convert the values to the same type before
+            comparing them, which can lead to unexpected results.
+            <code>===</code> (strict equality), on the other hand, does not
+            perform type coercion. It compares both the value and type, ensuring
+            a more predictable result. It's generally recommended to use
+            <code>===</code> for safer comparisons.
+          </p>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
