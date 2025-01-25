@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind & Daily UI-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog Page</title>
+  </head>
+  <body>
+    <!-- Blog  -->
+    <section class="max-w-screen-xl mx-auto pt-32">
+      <div class="container mx-auto px-6">
+        <h2 class="text-center text-2xl sm:text-3xl md:text-5xl font-semibold">
+          Frequently <span class="text-[#215675b7]">Asked Questions</span>
+        </h2>
+
+        <!-- FAQ Content -->
+        <div class="grid grid-cols-1 pt-12">
+          <div>
+            <div
+              class="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8"
+            >
+              <div class="space-y-4">
+                <details class="w-full border rounded-lg cursor-pointer">
+                  <summary
+                    class="px-4 py-5 focus:outline-none focus-visible:ring-violet-400 font-medium text-lg"
+                  >
+                    JavaScript Array methods: map() Vs forEach() Vs filter() Vs
+                    find()
+                  </summary>
+                  <div class="px-4 py-6 pt-0 ml-4 -mt-4">
+                    <div>
+                      <h3 class="font-bold text-lg">1. map()</h3>
+                      <p>
+                        The array map() method works with each element of an
+                        array and returns a new array.
+                      </p>
+                    </div>
+                    <br />
+
+                    <div>
+                      <h3 class="font-bold text-lg">2. forEach()</h3>
+                      <p>
+                        The array forEach() method works with each element of an
+                        array but doesn't returns a new array.
+                      </p>
+                    </div>
+                    <br />
+
+                    <div>
+                      <h3 class="font-bold text-lg">3. filter()</h3>
+                      <p>
+                        The array filter method works with those array elements
+                        which fulfil single or multiple conditions. The filter
+                        method returns a new array. If no array elements
+                        fulfilled the conditions, then it will return an empty
+                        array.
+                      </p>
+                    </div>
+                    <br />
+
+                    <div>
+                      <h3 class="font-bold text-lg">4. find()</h3>
+                      <p>
+                        The array finds method searches for a specific array
+                        element with a condition. If the element is found within
+                        the array, then it will return the element. If no
+                        element fulfilled the condition, then it will return
+                        <span class="font-semibold">undefined</span>. If
+                        multiple elements fulfil the condition, the find method
+                        will return the first matched element.
+                      </p>
+                    </div>
+                  </div>
+                </details>
+                <details class="w-full border rounded-lg cursor-pointer">
+                  <summary
+                    class="px-4 py-5 focus:outline-none focus-visible:ring-violet-400 font-medium text-lg"
+                  >
+                    Difference between localStorage Vs sessionStorage Vs
+                    Cookies.
+                  </summary>
+                  <div class="overflow-x-auto">
+                    <table class="table table-zebra w-full">
+                      <!-- head -->
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Cookies</th>
+                          <th>Local Storage</th>
+                          <th>Session Storage</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- row 1 -->
+                        <tr>
+                          <th>Expires</th>
+                          <td>manually set</td>
+                          <td>Never</td>
+                          <td>On tab close</td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                          <th>Storage Location</th>
+                          <td>Browser and Server</td>
+                          <td>Browser only</td>
+                          <td>Browser only</td>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                          <th>Sent with Request</th>
+                          <td>Yes</td>
+                          <td>No</td>
+                          <td>No</td>
+                        </tr>
+                        <!-- row 4 -->
+                        <tr>
+                          <th>Capacity</th>
+                          <td>4KB</td>
+                          <td>10MB</td>
+                          <td>5MB</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </details>
+                <details class="w-full border rounded-lg cursor-pointer">
+                  <summary
+                    class="px-4 py-5 focus:outline-none focus-visible:ring-violet-400 font-medium text-lg"
+                  >
+                    What is JavaScript Event loop? How does it works?
+                  </summary>
+                  <p class="px-4 py-6 pt-0 ml-4 -mt-4">
+                    In JavaScript, when some code needs to be executed, it will
+                    go to the call stack. Call stack works as LIFO method (Last
+                    In First Out). If the code's default behavior is
+                    synchronous, then it will execute and pop up from the call
+                    stack. But if its behavior is asynchronous, then it will go
+                    to the Web API / Browser API and performs its task there.
+                    Such as (setTimeout, setInterval, fetch(), DOM Event, etc).
+                    When the assigned task is complete, these codes will go to
+                    the Queue which works as a FIFO method (First In First Out)
+                    and wait there. Now the Event loop will work. The event loop
+                    will check if the call stack is empty or not. If it is, then
+                    will send the code from the queue to call the stack one by
+                    one.
+                  </p>
+                </details>
+                <details class="w-full border rounded-lg cursor-pointer">
+                  <summary
+                    class="px-4 py-5 focus:outline-none focus-visible:ring-violet-400 font-medium text-lg"
+                  >
+                    What does quizTimer() function do?
+                  </summary>
+                  <p class="px-4 py-6 pt-0 ml-4 -mt-4">
+                    The quizTimer() function takes a parameter which is a
+                    boolean value. If it's true, then it will stop the
+                    setInterval() function. Inside the function calculates how
+                    much minutes and seconds a user takes to complete all the
+                    quizzes. Depending on the second number (even or odd) it
+                    changes the color of the time.
+                  </p>
+                </details>
+                <details class="w-full border rounded-lg cursor-pointer">
+                  <summary
+                    class="px-4 py-5 focus:outline-none focus-visible:ring-violet-400 font-medium text-lg"
+                  >
+                    What does chooseQuiz() function do?
+                  </summary>
+                  <p class="px-4 py-6 pt-0 ml-4 -mt-4">
+                    The chooseQuiz() function takes two parameters which are
+                    index (the index of the quizData array), and givenAns (the
+                    answer the user has chosen). First, it checks if the answer
+                    is already in the array or not. If it does, then replace it
+                    with the new answer, otherwise, add it to the array.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
